@@ -38,10 +38,10 @@ Ler dados dos sensores.
 Exibir dados no monitor serial.
 
 Controlar relé de irrigação:
-Se solo > 40% (Desativa irrigação)
+Se solo > 60% (Desativa irrigação)
+Se solo < 20% (Irrigação imediata)
 Se chovendo (Desativa irrigação)
-Se UV ≤ 6 (Desativa irrigação)
-Caso contrário, ativa irrigação.
+Caso contrário (Lógica de irrigação).
 Montar mensagem com dados.
 Enviar mensagem para Telegram.
 Aguardar 10 segundos.
@@ -49,7 +49,6 @@ Aguardar 10 segundos.
 Lógica de Irrigação:
 Dia (LDR < 2000): 15 min ligado, 15 min desligado.
 Noite (LDR > 2000): 15 min ligado, 1 hora desligado.
-Irriga se umidade do solo < 20% ou LDR fora dos parâmetros.
 
 Envio de Mensagens:
 Envia mensagem a cada 15 minutos.

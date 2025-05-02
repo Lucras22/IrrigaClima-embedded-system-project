@@ -27,14 +27,23 @@ Funcionalidades Propostas
 
 - Acessibilidade e baixo custo: Desenvolvido com componentes acessíveis, o sistema é uma solução viável para pequenas propriedades agrícolas, que muitas vezes enfrentam dificuldades de acesso a tecnologias avançadas.
 
-# Materiais Utilizados
+# Materiais Utilizados:
 
 - ESP32: Módulo microcontrolador com conectividade Wi-Fi para enviar os dados coletados e controlar o sistema de irrigação de forma remota.
 - Sensor BME280: Para medir pressão atmosférica, temperatura do ar e umidade relativa.
 - Sensor GUVA-S12SD: Sensor de índice UV para medir a radiação ultravioleta.
 - Sensor de Chuva YL83: Detecta a presença de chuva, automatizando o desligamento da irrigação quando necessário.
 - Sensor de Umidade do Solo HL69: Monitora a umidade do solo para o acionamento da irrigação.
+- Sensor de Luminosidade (LDR): Detecta a intensidade da luz ambiente, permitindo identificar se é dia ou noite, útil para ajustes no ciclo de irrigação e economia de energia.
+- Sensor de Gás e Fumaça MQ-135: Detecta a presença de gases nocivos no ambiente, como monóxido de carbono, amônia e fumaça, útil para segurança ambiental e alertas preventivos.
 - Relé e Bomba de Irrigação: Controlam o fluxo de água com base nos dados de umidade do solo e detecção de chuva.
+
+
+# Sistema de Alimentação:
+
+- 2 baterias de lítio 3.7V ligadas em série (7.4V total): Fonte de energia portátil para alimentar o sistema.
+- Carregador de baterias (TP4056 com proteção ou similar): Permite recarregar as baterias de forma segura via porta USB.
+- Regulador de tensão (AMS1117 ou Step-Down tipo LM2596): Reduz a tensão de 7.4V para os 5V necessários para alimentar o ESP32 e os sensores.
 
 # Funcionamento do Sistema
 
